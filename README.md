@@ -96,7 +96,7 @@ GitHub Actions
 
 | Layer | Technology |
 |------|-------------|
-| Application | Golang 1.24 + Gin |
+| Application | Golang 1.25 + Gin |
 | Container Runtime | Docker / Docker Compose |
 | Compute | Amazon EC2 |
 | Log Collection | Amazon CloudWatch Agent |
