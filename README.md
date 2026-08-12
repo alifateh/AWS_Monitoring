@@ -90,6 +90,25 @@ GitHub Actions
 - 🔄 Optional **GitHub Actions Terraform CI/CD pipeline**
 - 🔐 Support for **GitHub OIDC + AWS IAM Role** authentication (no static AWS keys required)
 
+### Current Terraform Scope
+
+At the current stage of the project, Terraform provisions only the **CloudWatch Log Group** used by the application:
+
+* 📄 **Amazon CloudWatch Log Group** (`/aws/ec2/alerting-app`)
+* ⏳ **Log retention policy** (7 days)
+* 📤 **Terraform output** exposing the log group name
+
+Planned future Terraform modules will add:
+
+* 🌐 VPC networking
+* 🖥️ EC2 instance
+* 🔐 Security groups
+* 👤 IAM roles and policies
+* 📡 CloudWatch Subscription Filter
+* ⚡ AWS Lambda function
+* 🔔 Amazon SNS topic and email subscription
+
+
 ---
 
 ## 🧰 Tech Stack
@@ -237,18 +256,6 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 
-Terraform will provision:
-
-- VPC networking (if included)
-- EC2 instance
-- Security groups
-- IAM roles and policies
-- CloudWatch Log Group
-- CloudWatch Subscription Filter
-- Lambda function
-- SNS topic and email subscription
-
----
 
 ## 🔐 GitHub Actions + OIDC Authentication
 
@@ -430,7 +437,6 @@ yes
 
 ## 🔮 Future Improvements
 
-- [ ] Replace Python Lambda with **Golang Lambda** (`aws-lambda-go`)
 - [ ] Add **structured JSON logging**
 - [ ] Send alerts to **Slack or Microsoft Teams**
 - [ ] Store Terraform remote state in **S3 + DynamoDB locking**
