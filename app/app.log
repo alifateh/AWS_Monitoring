@@ -1,0 +1,4 @@
+2026/08/10 18:45:10 INFO: server started on :8080
+2026/08/10 18:45:27 INFO: normal request received
+2026/08/10 18:45:57 WARNING: suspicious activity detected
+2026/08/10 18:46:12 ERROR: application failure occurred
